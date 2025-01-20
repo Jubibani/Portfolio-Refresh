@@ -73,5 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         exploreButton.style.display = 'inline-block';
         exploreButton.classList.add('fade-in'); // Add fade-in animation class
-    }, 5500);
+    }, 5300);
+
+    const closeButton = document.getElementById('closeButton');
+
+    closeButton.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default anchor behavior
+        // Hide the portfolio or redirect
+        window.location.href = 'index.html'; // Redirect to the main page or hide the portfolio
+    });
 }); 
