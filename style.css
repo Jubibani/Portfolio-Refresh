@@ -1,5 +1,5 @@
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Lato', sans-serif; /* Change font to Lato */
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -7,12 +7,34 @@ body {
     color: #24292e; /* Dark text color */
 }
 
-header {
-    background: #24292e; /* Dark header */
-    color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
-    position: relative;
+.hero-title {
+    font-size: 4rem; /* Increase the size of Jubibani */
+    font-weight: 700; /* Bold font weight */
+    margin: 0; /* Remove default margin */
+}
+
+.Devname {
+    font-size: 3rem; /* Size of Jubibani */
+    margin: 0; /* Remove default margin */
+    padding: 20px 0; /* Add padding for spacing */
+    width: 100%; /* Set width to 100% to match the parent */
+    text-align: center; /* Center align the text */
+    color: transparent; /* Make the text color transparent */
+    -webkit-text-stroke: 1px black; /* Outline the text with a black stroke */
+    text-shadow: none; /* Remove any text shadow */
+}
+
+.Devdesc {
+    font-size: 1.5rem; /* Adjust font size for description */
+    margin: 0; /* Remove default margin */
+    padding: 10px 0; /* Add padding for spacing */
+    width: 100%; /* Set width to 100% to match the parent */
+    text-align: center; /* Center align the text */
+}
+
+.filled {
+    color: black; /* Fill color for Jiovanni and Jubibani */
+    -webkit-text-stroke: none; /* Remove stroke for filled text */
 }
 
 .menu-icon {
@@ -63,25 +85,29 @@ main {
 
 .hero {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.9); /* Light background for hero section */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 700px;
 }
 
 .cta-button {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #58a6ff; /* GitHub blue */
-    color: white;
-    text-decoration: none;
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    border: 2px solid black; /* Black border */
     border-radius: 5px;
-    transition: background-color 0.3s;
+    font-size: 1.2rem; /* Slightly larger font size for a cartoonish feel */
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s; /* Transition for hover effects */
+    box-shadow: 2px 2px 0px black; /* Cartoonish shadow effect */
 }
 
 .cta-button:hover {
-    background-color: #007bff; /* Darker blue on hover */
+    background-color: black; /* Change background to black on hover */
+    color: white; /* Change text color to white on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
 h2 {
