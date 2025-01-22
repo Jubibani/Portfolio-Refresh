@@ -80,7 +80,7 @@ main {
     justify-content: center;
     align-items: center;
     height: 100vh;
-
+    overflow: auto; /* Allow scrolling within the main content if needed */
 }
 
 .hero {
@@ -321,4 +321,50 @@ h2:hover {
         transform: rotate(0) scale(1);
         opacity: 1;
     }
+}
+
+html, body {
+    height: 100%; /* Ensure the body takes up the full height */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+main {
+    height: 100vh; /* Set main to full viewport height */
+    overflow: auto; /* Allow scrolling within the main content if needed */
+}
+
+.about {
+    padding: 20px;
+    max-width: 800px; /* Limit the width for better readability */
+    margin: 0 auto; /* Center the content */
+    font-family: 'Lato', sans-serif; /* Use the same font */
+}
+
+.about h1 {
+    font-size: 2.5rem; /* Larger font for the main heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.about h2 {
+    font-size: 1.8rem; /* Subheading size */
+    margin-top: 20px; /* Space above subheadings */
+}
+
+.about p {
+    font-size: 1.2rem; /* Paragraph font size */
+    line-height: 1.5; /* Improve readability */
+}
+
+.about ul {
+    list-style-type: disc; /* Use bullet points for the list */
+    padding-left: 20px; /* Indent the list */
+}
+
+.about a {
+    color: #007BFF; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.about a:hover {
+    text-decoration: underline; /* Underline on hover */
 } 
