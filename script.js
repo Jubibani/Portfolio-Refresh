@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {
     console.log("Welcome to my portfolio!");
     // You can add more interactive functionalities here
 
