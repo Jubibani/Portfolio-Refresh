@@ -492,6 +492,7 @@ main {
 } 
 
 .arrow {
+    display: none;
     position: absolute; /* Use absolute positioning */
     bottom: 0px; /* Position it 20px from the bottom */
     left: 50%; /* Center it horizontally */
@@ -503,6 +504,7 @@ main {
 .arrow:hover {
     transform: translateX(-50%) scale(1.1); /* Slightly enlarge on hover */
 }
+
 
 .arrow span {
     display: block;
