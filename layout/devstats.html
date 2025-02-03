@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hello</title>
+    <link rel="stylesheet" href="../src/css/dev.css">
+    <title>Dev Stats</title>
 </head>
 <body>
-    <h1>Dev stats</h1>
+    <div class="player-status-ui">
+        <div class="model-container">
+            <canvas id="modelCanvas"></canvas>
+        </div>
+        <div class="stats-container">
+            <h1>Developer Statistics</h1>
+            <ul class="stats-list">
+                <li><strong>Web Development:</strong> 75%</li>
+                <li><strong>App Development:</strong> 75%</li>
+                <li><strong>Game Development:</strong> 80%</li>
+                <li><strong>UI/UX Design:</strong> 65%</li>
+            </ul>
+        </div>
+    </div>
+    <script type="module" src="../src/js/dev.js"></script>
 </body>
 </html>

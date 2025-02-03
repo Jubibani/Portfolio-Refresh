@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    display: flex;
+    background-color: #f6f8fa;
+}
+
+.player-status-ui {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.model-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0; /* Light background for the model area */
+}
+
+.stats-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff; /* White background for stats */
+    border-left: 2px solid #000; /* Divider between model and stats */
+}
+
+.stats-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+}
+
+.stats-list li {
+    margin: 10px 0; /* Space between stats */
+    font-family: 'Lato', sans-serif; /* Use the same font */
+    font-size: 1.2rem; /* Adjust font size */
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
