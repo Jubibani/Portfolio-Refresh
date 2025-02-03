@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css"> <!-- Adjust the path if necessary -->
+    <link rel="stylesheet" href="../tabs.css"> <!-- Link to the tabs CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <title>About Me</title>
 </head>
@@ -11,26 +12,32 @@
     <a href="portfolio.html" class="close-button swirl-in-fwd" aria-label="Close"></a>
     <main class="slide-in-blurred-top">
         <section class="about fade-in">
-        
             <div class="about-me">
                 <img src="../src/me.jpg" alt="A picture of me" class="about-me-image">
                 <p class="about-me-desc">
-                    My name is Christopher Jiovanni A. Orpilla, but I go by my developer name, Jubibani—a sort of alter ego. I fell in love with coding! While some may think of me as a programmer, I see myself more as a builder and a problem solver.
+                    My name is Christopher Jiovanni A. Orpilla, but I go by my developer name, Jubibhani—a sort of alter ego. I fell in love with coding! While some may think of me as a programmer, I see myself more as a builder and a problem solver.
                 </p>
             </div>
-            <h2>Skills</h2>
-            <ul>
-                <li>Web Development</li>
-                <li>App Development</li>
-                <li>Game Development</li>
-                <li>UI/UX Design</li>
-            </ul>
-            <h2>Interests</h2>
-            <p>In my free time, I enjoy exploring new technologies, working on personal projects, and contributing to open-source initiatives.</p>
-            <h2>Contact</h2>
-            <p>If you'd like to get in touch, feel free to reach out via my <a href="mailto:your-email@example.com">email</a>.</p>
+            <div class="tabs">
+                <div class="tab" onclick="openTab(event, 'skills')">Skills</div>
+                <div class="tab" onclick="openTab(event, 'interests')">Interests</div>
+            </div>
+            <div id="skills" class="tab-content">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Web Development</li>
+                    <li>App Development</li>
+                    <li>Game Development</li>
+                    <li>UI/UX Design</li>
+                </ul>
+            </div>
+            <div id="interests" class="tab-content" style="display:none;">
+                <h2>Interests</h2>
+                <p>In my free time, I enjoy exploring new technologies, working on personal projects, and contributing to open-source initiatives.</p>
+            </div>
         </section>
     </main>
     <script src="../script.js"></script>
+    <script src="../tabs.js"></script> <!-- Link to the tabs JavaScript -->
 </body>
 </html>
