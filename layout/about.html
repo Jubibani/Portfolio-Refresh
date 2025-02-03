@@ -28,42 +28,44 @@
                     <li>
                         <span>Web Development</span>
                         <div class="progress-bar">
-                            <div class="progress" style="width: 75%;"></div>
+                            <div class="progress" data-width="75%"></div>  <!-- Removed inline width -->
                         </div>
                     </li>
                     <li>
                         <span>App Development</span>
                         <div class="progress-bar">
-                            <div class="progress" style="width: 75%;"></div>
+                            <div class="progress" data-width="75%"></div>
                         </div>
                     </li>
                     <li>
                         <span>Game Development</span>
                         <div class="progress-bar">
-                            <div class="progress" style="width: 80%;"></div>
+                            <div class="progress" data-width="80%"></div>
                         </div>
                     </li>
                     <li>
                         <span>UI/UX Design</span>
                         <div class="progress-bar">
-                            <div class="progress" style="width: 75%;"></div>
+                            <div class="progress" data-width="75%"></div>
                         </div>
                     </li>
-                    <li>
-                        <span>Automation</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 55%;"></div>
-                        </div>
-                    </li>
+                    
                 </ul>
             </div>
             <div id="interests" class="tab-content" style="display: none;">
                 <h2>Interests</h2>
                 <p>In my free time, I enjoy exploring new technologies, working on personal projects, and contributing to open-source initiatives.</p>
             </div>
+            <div class="arrow" role="button" tabindex="0" aria-label="Scroll down">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        
         </section>
+        
     </main>
     <script src="../script.js"></script>
-    <script src="../tabs.js"></script> <!-- Link to the tabs JavaScript -->
+    <script src="../tabs.js"></script> 
 </body>
 </html>

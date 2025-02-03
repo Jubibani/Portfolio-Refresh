@@ -82,4 +82,7 @@
         // Hide the portfolio or redirect
         window.location.href = 'index.html'; // Redirect to the main page or hide the portfolio
     });
+    
+    
+    
 }); 
