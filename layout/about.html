@@ -15,23 +15,49 @@
             <div class="about-me">
                 <img src="../src/me.jpg" alt="A picture of me" class="about-me-image">
                 <p class="about-me-desc">
-                    My name is Christopher Jiovanni A. Orpilla, but I go by my developer name, Jubibhani—a sort of alter ego. I fell in love with coding! While some may think of me as a programmer, I see myself more as a builder and a problem solver.
+                    My name is <strong>Christopher Jiovanni A. Orpilla</strong>, but I go by my developer name, <strong>Jubibani</strong>—a sort of alter ego. I fell in love with coding! While some may think of me as a programmer, I see myself more as a builder and a problem solver.
                 </p>
             </div>
             <div class="tabs">
-                <div class="tab" onclick="openTab(event, 'skills')">Skills</div>
+                <div class="tab active" onclick="openTab(event, 'skills')">Skills</div>
                 <div class="tab" onclick="openTab(event, 'interests')">Interests</div>
             </div>
-            <div id="skills" class="tab-content">
-                <h2>Skills</h2>
-                <ul>
-                    <li>Web Development</li>
-                    <li>App Development</li>
-                    <li>Game Development</li>
-                    <li>UI/UX Design</li>
+            <div id="skills" class="tab-content" style="display: block; max-height: none;">
+                <!-- <h2>Hard Skills</h2> -->
+                <ul class="skills-list">
+                    <li>
+                        <span>Web Development</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>App Development</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Game Development</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>UI/UX Design</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Automation</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 55%;"></div>
+                        </div>
+                    </li>
                 </ul>
             </div>
-            <div id="interests" class="tab-content" style="display:none;">
+            <div id="interests" class="tab-content" style="display: none;">
                 <h2>Interests</h2>
                 <p>In my free time, I enjoy exploring new technologies, working on personal projects, and contributing to open-source initiatives.</p>
             </div>
