@@ -2,6 +2,7 @@ import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.138/build/three.mod
 import { OBJLoader } from '../libs/examples/jsm/loaders/OBJLoader.js'; // Correct path to OBJLoader.js
 import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.138/examples/jsm/controls/OrbitControls.js';
 
+
 // Create the scene, camera, and renderer
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -65,17 +66,3 @@ document.addEventListener('DOMContentLoaded', () => {
     animateProgressBars();
 });
 
-// Function to animate progress bars
-function animateProgressBars() {
-    const progressBars = document.querySelectorAll(".progress");
-
-    progressBars.forEach(progress => {
-        let finalWidth = progress.getAttribute("data-width"); // Get target width
-        progress.style.transition = "width 3.5s ease-in-out"; // Smooth animation
-
-        // Apply final width
-        setTimeout(() => {
-            progress.style.width = finalWidth;
-        }, 200); 
-    });
-}
