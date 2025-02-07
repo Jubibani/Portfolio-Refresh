@@ -60,4 +60,22 @@ document.addEventListener('DOMContentLoaded', () => {
         autoPlay: true, // Optional: Automatically play the carousel
         pageDots: false // Optional: Hide page dots
     });
+
+    // Animate progress bars on page load
+    animateProgressBars();
 });
+
+// Function to animate progress bars
+function animateProgressBars() {
+    const progressBars = document.querySelectorAll(".progress");
+
+    progressBars.forEach(progress => {
+        let finalWidth = progress.getAttribute("data-width"); // Get target width
+        progress.style.transition = "width 3.5s ease-in-out"; // Smooth animation
+
+        // Apply final width
+        setTimeout(() => {
+            progress.style.width = finalWidth;
+        }, 200); 
+    });
+}

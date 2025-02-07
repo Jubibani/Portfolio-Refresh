@@ -60,8 +60,6 @@ function resetProgressBars() {
         progress.style.transition = "none"; // Disable transition for instant reset
         progress.style.width = "0"; // Reset width
     });
-
-    
 }
 
 // Call animation on page load (if skills tab is active)
