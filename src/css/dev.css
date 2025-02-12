@@ -98,12 +98,13 @@ canvas {
 }
 
 .progress-container {
-   
+    display: flex; /* Use flexbox for centering */
     justify-content: center; /* Center horizontally */
     width: 100%; /* Full width to allow centering */
 }
 
 .progress-bar {
+    margin-left: -65px;
     background-color: #e0e0e0; /* Background color */
     border-radius: 5px;
     overflow: hidden;
@@ -115,6 +116,7 @@ canvas {
     background-color: #000000; /* Progress color */
     height: 100%;
     width: 0; /* Start from 0 */
+    transition: width 3.5s ease-in-out; /* Smooth animation */
 }
 
 .close-button {
@@ -206,4 +208,45 @@ canvas {
         transform: rotate(0) scale(1);
         opacity: 1;
     }
+}
+
+/*head animation*/
+.tracking-in-expand {
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+h1, h2, h3, h4, h5, h6, p, span, li {
+    font-family: inherit; /* Ensure these elements inherit the font from the body */
+}
+
+/* You can also explicitly set it if needed */
+.stats-list-progress li {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Ensure list items use the desired font */
 }

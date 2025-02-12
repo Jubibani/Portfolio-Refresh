@@ -1,11 +1,19 @@
 body {
-    font-family: 'Lato', sans-serif; /* Change font to Lato */
-    margin: 0;
-    padding: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Set the default font for the entire document */
+    margin: 0; /* Optional: Reset margin */
+    padding: 0; /* Optional: Reset padding */
     line-height: 1.6;
     background-color: #f6f8fa; /* Light background similar to GitHub */
     color: #24292e; /* Dark text color */
     overflow: hidden; /* Hide the scrollbar */
+}
+
+h1, h2, h3, h4, h5, h6, p, span, li {
+    font-family: inherit; /* Ensure these elements inherit the font from the body */
+}
+
+.stats-list-progress li {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Ensure list items use the desired font */
 }
 
 .hero-title {
