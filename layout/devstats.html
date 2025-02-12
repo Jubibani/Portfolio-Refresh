@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <title>Dev Stats</title>
 </head>
-<body>
+<body class="scale-in-hor-center">
     <a href="about.html" class="close-button swirl-in-fwd" aria-label="Close"></a>
+    <a href="inventory.html" class="bag-button swirl-in-fwd" aria-label="Inventory">
+        <div class="bag-icon"></div>
+    </a>
     <div class="player-status-ui">
         <div class="model-container">
             <canvas id="modelCanvas"></canvas>
@@ -152,18 +155,10 @@
                     </ul>
                 </div>
 
-                <!-- <div class="gallery-cell">
-                    <h2>Soft Skills</h2>
-                    <ul class="stats-list">
-                        <li><strong>Communication</strong></li>
-                        <li><strong>Teamwork</strong></li>
-                        <li><strong>Problem-Solving</strong></li>
-                        <li><strong>Adaptability</strong></li>
-                    </ul>
-                </div> -->
             </div>
         </div>
     </div>
+
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script type="module" src="../src/js/dev.js"></script>
 </body>

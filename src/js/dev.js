@@ -26,6 +26,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Animate progress bars on page load
     animateProgressBars();
 
+    // Add entrance animation to stats-container
+    const statsContainer = document.querySelector('.stats-container');
+    statsContainer.classList.add('scale-in-hor-left');
+
+    //entrance animation bag
+    const bagButton = document.querySelector('.bag-button');
+
+    // Listen for the animation end event
+    bagButton.addEventListener('animationend', () => {
+        bagButton.classList.remove('swirl-in-fwd');
+    });
+    
     // Update heading based on active slide
     flkty.on('change', (index) => {
         console.log('Current slide index:', index); // Debugging line

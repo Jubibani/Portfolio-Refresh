@@ -166,7 +166,7 @@ canvas {
 }
 .swirl-in-fwd {
     -webkit-animation: swirl-in-fwd 0.6s ease-out both;
-    animation: swirl-in-fwd 0.6s ease-out both;
+    animation: swirl-in-fwd 1.5s ease-out both;
 }
 
 
@@ -249,4 +249,69 @@ h1, h2, h3, h4, h5, h6, p, span, li {
 /* You can also explicitly set it if needed */
 .stats-list-progress li {
     font-family: 'Comic Sans MS', cursive, sans-serif; /* Ensure list items use the desired font */
+}
+
+.bag-button {
+    width: 100px; /* Set width */
+    height: 100px; /* Set height */
+    position: absolute; /* Position it absolutely */
+    bottom: 20px; /* Position from the bottom */
+    right: 20px; /* Position from the right */
+    display: block; /* Ensure it is displayed as a block */
+    z-index: 200; /* Ensure it is above other elements */
+    text-decoration: none; /* Remove underline */
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+.bag-icon {
+    border-radius: 20px;
+    width: 100%; /* Full width of the button */
+    height: 100%; /* Full height of the button */
+    background-image: url('/assets/bag.png'); /* Replace with your bag icon image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    transition: transform 0.3s ease; /* Smooth transition for the bag icon */
+}
+
+/* Hover effects */
+.bag-button:hover .bag-icon {
+    transform: scale(1.1); /* Slightly enlarge the icon */
+}
+
+
+.bag-button:hover {
+    transform: rotate(-15deg); /* Rotate the button slightly */
+    transition: transform 0.3s ease; /* Ensure smooth transition */
+}
+
+/*entrance-animation*/
+.scale-in-hor-center {
+    -webkit-animation: scale-in-hor-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: scale-in-hor-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes scale-in-hor-center {
+    0% {
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+
+@keyframes scale-in-hor-center {
+    0% {
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        opacity: 1;
+    }
 }
