@@ -2,7 +2,6 @@ body {
     margin: 0;
     display: flex;
     background-color: #f6f8fa;
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Use a playful font */
 }
 
 .player-status-ui {
@@ -57,7 +56,6 @@ body {
 }
 
 .stats-list li {
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Use the same font */
     margin: 10px 0; /* Space between stats */
     font-size: 1.5rem; /* Larger font size for better readability */
     color: #000000; /* Dark text color */
@@ -71,7 +69,6 @@ body {
 
 .stats-list-progress li {
     margin-left: 70px;
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Use the same font */
    
     font-size: 1.5rem; /* Larger font size for better readability */
     color: #000000; /* Dark text color */
@@ -242,14 +239,8 @@ canvas {
     }
 }
 
-h1, h2, h3, h4, h5, h6, p, span, li {
-    font-family: inherit; /* Ensure these elements inherit the font from the body */
-}
 
-/* You can also explicitly set it if needed */
-.stats-list-progress li {
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Ensure list items use the desired font */
-}
+
 
 .bag-button {
     width: 100px; /* Set width */

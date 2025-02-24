@@ -1,5 +1,4 @@
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Set the default font for the entire document */
     margin: 0; /* Optional: Reset margin */
     padding: 0; /* Optional: Reset padding */
     line-height: 1.6;
@@ -8,13 +7,6 @@ body {
     overflow: hidden; /* Hide the scrollbar */
 }
 
-h1, h2, h3, h4, h5, h6, p, span, li {
-    font-family: inherit; /* Ensure these elements inherit the font from the body */
-}
-
-.stats-list-progress li {
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Ensure list items use the desired font */
-}
 
 .hero-title {
     font-size: 4rem; /* Increase the size of Jubibani */
@@ -138,7 +130,6 @@ h2:hover {
 .options {
     text-align: center;
     padding: 20px;
-    font-family: 'Lato', sans-serif; /* Change font to Lato */
     font-size: 1.5rem; /* Increase font size for options */
 }
 
@@ -353,7 +344,6 @@ main {
     padding: 20px;
     max-width: 800px; /* Limit the width for better readability */
     margin: 0 auto; /* Center the content */
-    font-family: 'Lato', sans-serif; /* Use the same font */
     position: relative; /* Set position to relative */
     z-index: 1; /* Ensure it stays above other content */
 }
@@ -405,7 +395,6 @@ main {
     margin-top: 0; /* Ensure there's no top margin for the paragraph */
     margin-bottom: 20px; /* Adjust bottom margin as needed */
     color: black; /* Set text color to black */
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Use a cartoonish font */
     text-shadow: 1px 1px 0px white; /* Add a white shadow for a cartoonish effect */
 }
 
@@ -460,7 +449,6 @@ main {
 
 .skills-list li {
     margin: 10px 0; /* Space between skills */
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Use the same font */
 }
 
 
@@ -490,7 +478,6 @@ main {
     margin: 15px; /* Space between interests */
     display: flex; /* Use flexbox for icon and text */
     align-items: center; /* Center align items */
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Use the same font */
 }
 
 .interest-icon {

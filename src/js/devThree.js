@@ -9,11 +9,24 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('modelCanvas') });
 renderer.setSize(window.innerWidth / 2, window.innerHeight);
 
+renderer.setClearColor(0xE6D5AC);  // Light brown/beige background
+renderer.shadowMap.enabled = true;  // Enable shadows
 
-// Add lighting to the scene
-const light = new THREE.DirectionalLight(0xffffff, 1);
-light.position.set(2, 2, 5);
-scene.add(light);
+
+// Replace existing lighting setup with this:
+// Main directional light
+const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+directionalLight.position.set(5, 5, 5);
+directionalLight.castShadow = true;
+scene.add(directionalLight);
+
+// Ambient light for overall scene brightness
+const ambientLight = new THREE.AmbientLight(0x404040, 2);
+scene.add(ambientLight);
+
+// Add hemisphere light for natural lighting
+const hemisphereLight = new THREE.HemisphereLight(0xffffff, 0x404040, 1);
+scene.add(hemisphereLight);
 
 // Load the 3D model (Man.obj)
 const loader = new OBJLoader();
@@ -23,8 +36,19 @@ const modelPath = isGitHubPages ? '/Portfolio-Refresh/assets/Man.obj' : '../asse
 loader.load(
     modelPath,
     function (object) {
-        object.scale.set(1, 1, 1); // Adjust scale if necessary
-        object.position.set(0, -1, 0); // Adjust position if necessary
+        object.scale.set(0.8, 0.8, 0.8);
+        object.position.set(0, -4, 0);
+        object.rotation.y = Math.PI / 4;
+        
+        // Add this to handle materials
+        object.traverse((child) => {
+            if (child.isMesh) {
+                child.material.side = THREE.DoubleSide;
+                child.castShadow = true;
+                child.receiveShadow = true;
+            }
+        });
+        
         scene.add(object);
     },
     function (xhr) {
@@ -35,12 +59,26 @@ loader.load(
     }
 );
 
-// Set camera position
-camera.position.z = 5;
+// Set camera position for better view
+camera.position.set(0, 1, 8); // Moved back and slightly up
+camera.lookAt(0, 0, 0);
 
-// Setup OrbitControls
+// Setup OrbitControls with constraints
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
+controls.dampingFactor = 0.05;
+controls.minDistance = 3;
+controls.maxDistance = 10;
+controls.enableZoom = true;        // Allow zooming
+controls.enablePan = true;         // Allow panning
+controls.enableRotate = true;      // Allow rotation
+controls.autoRotate = false;       // Optional: auto-rotate the model
+controls.autoRotateSpeed = 2.0;    // Speed of auto-rotation if enabled
+controls.mouseButtons = {
+    LEFT: THREE.MOUSE.ROTATE,      // Left click to rotate
+    MIDDLE: THREE.MOUSE.DOLLY,     // Middle click/wheel to zoom
+    RIGHT: THREE.MOUSE.PAN         // Right click to pan
+};
 
 // Render loop
 function animate() {
