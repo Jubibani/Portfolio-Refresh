@@ -1,7 +1,7 @@
 // Using CDN imports for Three.js and its modules
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.138/build/three.module.js';
-import { OBJLoader } from 'https://cdn.jsdelivr.net/npm/three@0.138/examples/jsm/loaders/OBJLoader.js';
-import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.138/examples/jsm/controls/OrbitControls.js';
+import * as THREE from 'three';
+import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 // Create the scene, camera, and renderer
 const scene = new THREE.Scene();
