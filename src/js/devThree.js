@@ -17,8 +17,11 @@ scene.add(light);
 
 // Load the 3D model (Man.obj)
 const loader = new OBJLoader();
+const isGitHubPages = window.location.hostname.includes('github.io');
+const modelPath = isGitHubPages ? '/Portfolio-Refresh/assets/Man.obj' : '../assets/Man.obj';
+
 loader.load(
-    '../../assets/Man.obj',  // Adjusted for file in assets folder, from src/js/
+    modelPath,
     function (object) {
         object.scale.set(1, 1, 1); // Adjust scale if necessary
         object.position.set(0, -1, 0); // Adjust position if necessary
