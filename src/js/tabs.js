@@ -19,7 +19,7 @@ function openTab(evt, tabName) {
     // Show the selected tab
     var currentTab = document.getElementById(tabName);
     currentTab.style.display = "block";
-    currentTab.style.maxHeight = currentTab.scrollHeight + "px";
+    currentTab.style.maxHeight = "none"; // Changed from scrollHeight to none
     evt.currentTarget.classList.add("active");
     evt.currentTarget.classList.add("active-tab");
 

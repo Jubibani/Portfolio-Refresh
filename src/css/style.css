@@ -576,7 +576,7 @@ main {
 
 .interest-card {
     background: #fff;
-    border: 3px solid #000;
+    border: 2px solid #000;
     border-radius: 15px;
     padding: 20px;
     text-align: center;
@@ -654,7 +654,7 @@ main {
 
 #interests.tab-content {
     background-color: #f8f9fa;
-    border-width: 3px;
+    border-width: 2px;
     padding: 30px;
 }
 
@@ -684,5 +684,90 @@ main {
 
 #interests h2:hover::after {
     transform: scaleX(1);
+}
+
+.carousel-container {
+    width: 100%;
+    position: relative;
+    padding: 20px 60px; /* Increased side padding from 40px to 60px */
+    box-sizing: border-box;
+}
+
+.carousel-slide {
+    display: none;
+    justify-content: center;
+    gap: 20px;
+    animation: fadeEffect 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+    display: flex;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #000;
+    border: 2px solid #000;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    z-index: 3;
+}
+
+.carousel-button:hover {
+    background: white;
+    color: black;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+}
+
+.carousel-prev {
+    left: -10px; /* Move left button further out */
+}
+
+.carousel-next {
+    right: -10px; /* Move right button further out */
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+    background: #000;
+    transform: scale(1.2);
+}
+
+.carousel-slide .interest-card {
+    flex: 1;
+    max-width: calc(50% - 10px);
+    margin: 0;
+    opacity: 1;
 }
   

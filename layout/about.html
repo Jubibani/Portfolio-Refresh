@@ -59,29 +59,68 @@
                 </ul>
             </div>
             <div id="interests" class="tab-content" style="display: none;">
-                <div class="interests-container">
-                    <div class="interest-card bounce-in">
-                        <div class="interest-icon">🎮</div>
-                        <h3 class="interest-title">Game Development</h3>
-                        <p class="interest-description">As a kid, I was fascinated by how games worked—now, I'm creating my own worlds and bringing ideas to life through code.</p>
+                <div class="carousel-container">
+                    <button class="carousel-button carousel-prev" onclick="moveCarousel(-1)">←</button>
+                    <button class="carousel-button carousel-next" onclick="moveCarousel(1)">→</button>
+                    
+                    <div class="carousel-slide active">
+                        <div class="interest-card bounce-in">
+                            <div class="interest-icon">🎮</div>
+                            <h3 class="interest-title">Gaming</h3>
+                            <p class="interest-description">Beyond playing, I analyze game mechanics, storytelling, and design—fueling my passion for game development.</p>
+                        </div>
+                        <div class="interest-card bounce-in">
+                            <div class="interest-icon">📖</div>
+                            <h3 class="interest-title">Reading & Writing</h3>
+                            <p class="interest-description">I journal my thoughts, and when I learn something technical, I write an article. As they say, the best way to learn is to teach.</p>
+                        </div>
                     </div>
-                    <div class="interest-card bounce-in">
-                        <div class="interest-icon">💻</div>
-                        <h3 class="interest-title">Web Development</h3>
-                        <p class="interest-description">My journey started with FreeCodeCamp, and I quickly fell in love with building fast, interactive, and user-friendly websites.</p>
+                    
+                    <div class="carousel-slide">
+                        <div class="interest-card bounce-in">
+                            <div class="interest-icon">🍿</div>
+                            <h3 class="interest-title">Anime & Movies</h3>
+                            <p class="interest-description">Stories, visuals, and world-building inspire my creative thinking—shaping how I approach design and development.</p>
+                        </div>
+                        <div class="interest-card bounce-in">
+                            <div class="interest-icon">🎵</div>
+                            <h3 class="interest-title">Music</h3>
+                            <p class="interest-description">Music fuels my workflow—whether coding deep into the night or designing a new project, it's always part of my process.</p>
+                        </div>
                     </div>
-                    <div class="interest-card bounce-in">
-                        <div class="interest-icon">🎨</div>
-                        <h3 class="interest-title">UI/UX Design</h3>
-                        <p class="interest-description">From sketching as a kid to animating and designing intuitive user experiences—I love crafting interfaces that feel natural and seamless.</p>
+
+                    <div class="carousel-slide">
+                        <div class="interest-card bounce-in">
+                            <div class="interest-icon">🎮</div>
+                            <h3 class="interest-title">Game Development</h3>
+                            <p class="interest-description">As a kid, I was fascinated by how games worked—now, I'm creating my own worlds and bringing ideas to life through code.</p>
+                        </div>
+                        <div class="interest-card bounce-in">
+                            <div class="interest-icon">💻</div>
+                            <h3 class="interest-title">Web Development</h3>
+                            <p class="interest-description">My journey started with FreeCodeCamp, and I quickly fell in love with building fast, interactive, and user-friendly websites.</p>
+                        </div>
                     </div>
-                    <div class="interest-card bounce-in">
-                        <div class="interest-icon">📱</div>
-                        <h3 class="interest-title">App Development</h3>
-                        <p class="interest-description">We live in a mobile-first world, and I enjoy building apps that people interact with daily—bringing convenience to their fingertips.</p>
+
+                    <div class="carousel-slide">
+                        <div class="interest-card bounce-in">
+                            <div class="interest-icon">🎨</div>
+                            <h3 class="interest-title">UI/UX Design</h3>
+                            <p class="interest-description">From sketching as a kid, to drawing and animating, I grew up learning to craft seamless and intuitive user experiences.</p>
+                        </div>
+                        <div class="interest-card bounce-in">
+                            <div class="interest-icon">📱</div>
+                            <h3 class="interest-title">App Development</h3>
+                            <p class="interest-description">We live in a mobile-first world, and I build apps that people interact with daily—bringing convenience to their fingertips.</p>
+                        </div>
                     </div>
-                </div>
-                
+                    
+                    <div class="carousel-dots">
+                        <span class="carousel-dot active" onclick="currentSlide(1)"></span>
+                        <span class="carousel-dot" onclick="currentSlide(2)"></span>
+                        <span class="carousel-dot" onclick="currentSlide(3)"></span>
+                        <span class="carousel-dot" onclick="currentSlide(4)"></span>
+                    </div>
                 </div>
             </div>
             <div class="arrow" role="button" tabindex="0" aria-label="Scroll down">
@@ -94,6 +133,7 @@
         
     </main>
     <script src="../src/js/script.js"></script>
-    <script src="../src/js/tabs.js"></script> 
+    <script src="../src/js/tabs.js"></script>
+    <script src="../src/js/carousel.js"></script>
 </body>
 </html>
