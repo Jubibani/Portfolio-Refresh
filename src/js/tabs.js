@@ -4,8 +4,8 @@ function openTab(evt, tabName) {
     // Hide all tab content
     tabcontent = document.getElementsByClassName("tab-content");
     for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.maxHeight = null;
         tabcontent[i].style.display = "none";
+        tabcontent[i].classList.remove("bounce-in-top"); // Remove animation class
     }
     
 
@@ -19,7 +19,7 @@ function openTab(evt, tabName) {
     // Show the selected tab
     var currentTab = document.getElementById(tabName);
     currentTab.style.display = "block";
-    currentTab.style.maxHeight = "none"; // Changed from scrollHeight to none
+    currentTab.classList.add("bounce-in-top"); // Add bounce animation
     evt.currentTarget.classList.add("active");
     evt.currentTarget.classList.add("active-tab");
 
